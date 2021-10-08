@@ -27,6 +27,7 @@ public class MyApp: Gtk.Application{
 
     var title_label=new Gtk.Label(_("Notifications"));
     var show_button=new Gtk.Button.with_label(_("Show notification"));
+    var show_button2=new Gtk.Button.with_label(_("Replace Notification"));
 
     var grid=new Gtk.Grid();
     grid.orientation=Gtk.Orientation.VERTICAL;
@@ -34,6 +35,7 @@ public class MyApp: Gtk.Application{
     grid.margin=12;
     grid.add(title_label);
     grid.add(show_button);
+    grid.add(show_button2);
 
 
 
@@ -62,9 +64,18 @@ public class MyApp: Gtk.Application{
     show_button.clicked.connect(()=>{
       var notification=new Notification(_("Hello world!"));
       notification.set_icon(new ThemedIcon("process-completed"));
+      notification.add_button(_("Quit"),"app.quit");
+      notification.set_priority(NotificationPriority.URGENT);
       notification.set_body(_("This is my first notification!"));
       send_notification("com.github.dbeimer.hello_vala", notification);
 
+    });
+
+    show_button2.clicked.connect(()=>{
+      var notification=new Notification(_("Hello Again"));
+      notification.set_body(_("this is my second notiication"));
+
+      send_notification("com.github.dbeimer.hello_vala",notification);
     });
 
     // main_window.add(label);
