@@ -25,6 +25,18 @@ public class MyApp: Gtk.Application{
       show_close_button=true
     };
 
+    var title_label=new Gtk.Label(_("Notifications"));
+    var show_button=new Gtk.Button.with_label(_("Show notification"));
+
+    var grid=new Gtk.Grid();
+    grid.orientation=Gtk.Orientation.VERTICAL;
+    grid.row_spacing=6; 
+    grid.margin=12;
+    grid.add(title_label);
+    grid.add(show_button);
+
+
+
     header_bar.add(button);
 
     //simple action
@@ -47,9 +59,17 @@ public class MyApp: Gtk.Application{
       button_hello.sensitive=false;
     });
 
+    show_button.clicked.connect(()=>{
+      var notification=new Notification(_("Hello world!"));
+      notification.set_icon(new ThemedIcon("process-completed"));
+      notification.set_body(_("This is my first notification!"));
+      send_notification("com.github.dbeimer.hello_vala", notification);
+
+    });
+
     // main_window.add(label);
     main_window.set_titlebar(header_bar);
-    main_window.add(button_hello);
+    main_window.add(grid);
     main_window.show_all();
 
     quit_action.activate.connect(()=>{

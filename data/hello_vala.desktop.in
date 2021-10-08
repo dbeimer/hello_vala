@@ -7,4 +7,5 @@ Exec=com.github.dbeimer.hello_vala
 Icon=com.github.dbeimer.hello_vala
 Terminal=false
 Type=Application
+X-GNOME-UsesNotifications=true
 Keywords=Hello;Vala;Example;
