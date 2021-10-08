@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.dbeimer.hello_vala\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-08 17:16-0500\n"
+"POT-Creation-Date: 2021-10-08 17:41-0500\n"
 "PO-Revision-Date: 2021-10-08 17:16-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Application.vala:23
+msgid "actions"
+msgstr ""
+
+#: src/Application.vala:26
+msgid "Click me!"
+msgstr ""
+
+#: src/Application.vala:31
+msgid "Hola mundo!"
+msgstr ""
 
 #: data/hello_vala.desktop.in:3 data/hello_vala.appdata.xml.in:6
 msgid "Hello Vala"

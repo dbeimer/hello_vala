@@ -13,26 +13,48 @@ public class MyApp: Gtk.Application{
 
   protected override void activate(){
 
+    var button = new Gtk.Button.from_icon_name("process-stop",Gtk.IconSize.LARGE_TOOLBAR){
+      action_name="app.quit",
+      tooltip_markup=Granite.markup_accel_tooltip(
+        get_accels_for_action("app.quit"),
+        "Quit"
+        )
+    };
+    
+    var header_bar=new Gtk.HeaderBar(){
+      show_close_button=true
+    };
+
+    header_bar.add(button);
+
+    //simple action
+    var quit_action=new SimpleAction("quit", null);
+    add_action(quit_action);
+    set_accels_for_action("app.quit",{"<Control>q","<Control>w"});
+
     var main_window=new Gtk.ApplicationWindow(this){
       default_height=300,
       default_width=300,
-      title="Hello word"
+      title=_("actions")
     };
 
-    var button_hello=new Gtk.Button.with_label("Click me!"){
+    var button_hello=new Gtk.Button.with_label(_("Click me!")){
       margin=12
     };
 
     button_hello.clicked.connect(()=>{
-      button_hello.label="Hello World!";
+      button_hello.label=_("Hola mundo!");
       button_hello.sensitive=false;
     });
 
-    var label=new Gtk.Label("Hello Again World!");
-
     // main_window.add(label);
+    main_window.set_titlebar(header_bar);
     main_window.add(button_hello);
     main_window.show_all();
+
+    quit_action.activate.connect(()=>{
+      main_window.destroy();
+    });
 
   }
 
