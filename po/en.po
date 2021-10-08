@@ -1,0 +1,46 @@
+# English translations for com.github.dbeimer.hello_vala package.
+# Copyright (C) 2021 THE com.github.dbeimer.hello_vala'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.dbeimer.hello_vala package.
+# Automatically generated, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.dbeimer.hello_vala\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-08 17:16-0500\n"
+"PO-Revision-Date: 2021-10-08 17:16-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/hello_vala.desktop.in:3 data/hello_vala.appdata.xml.in:6
+msgid "Hello Vala"
+msgstr "Hello Vala"
+
+#: data/hello_vala.desktop.in:4
+msgid "Hello World App"
+msgstr "Hello World App"
+
+#: data/hello_vala.desktop.in:5
+msgid "Proves that we can use Vala Gtk"
+msgstr "Proves that we can use Vala Gtk"
+
+#: data/hello_vala.desktop.in:8
+msgid "com.github.dbeimer.hello_vala"
+msgstr "com.github.dbeimer.hello_vala"
+
+#: data/hello_vala.desktop.in:11
+msgid "Hello;Vala;Example;"
+msgstr "Hello;Vala;Example;"
+
+#: data/hello_vala.appdata.xml.in:7
+msgid "A catchy tagline"
+msgstr "A catchy tagline"
+
+#: data/hello_vala.appdata.xml.in:9
+msgid "A quick summary of your app's main selling points and features"
+msgstr "A quick summary of your app's main selling points and features"
