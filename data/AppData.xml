@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Beimer beimercampos.123@gmail.com -->
+<component type="desktop">
+  <id>com.github.dbeimer.hello_vala</id>
+  <metadata_license>CCO</metadata_license>
+  <name>Hello Vala</name>
+  <summary>A catchy tagline</summary>
+  <description>
+    <p>A quick summary of your app's main selling points and features</p>
+  </description>
+</component>
