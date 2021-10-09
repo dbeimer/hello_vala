@@ -13,6 +13,17 @@ public class MyApp: Gtk.Application{
 
   protected override void activate(){
 
+    //activando el dark mode
+    var granite_settings=Granite.Settings.get_default();
+    var gtk_settings=Gtk.Settings.get_default();
+
+
+    gtk_settings.gtk_application_prefer_dark_theme=granite_settings.prefers_color_scheme==Granite.Settings.ColorScheme.DARK;
+
+    granite_settings.notify["prefers_color_scheme"].connect(()=>{
+      gtk_settings.gtk_application_prefer_dark_theme=granite_settings.prefers_color_scheme==Granite.Settings.ColorScheme.DARK; 
+    }); 
+
     var button = new Gtk.Button.from_icon_name("process-stop",Gtk.IconSize.LARGE_TOOLBAR){
       action_name="app.quit",
       tooltip_markup=Granite.markup_accel_tooltip(
