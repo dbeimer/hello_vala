@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Beimer Campos <beimercampos.123@gmail.com>
  */
 
-public class MyApp: Gtk.Application{
+public class MyApp: Granite.Application{
   public MyApp(){
     Object(
         application_id:"com.github.dbeimer.hello_vala",
@@ -90,6 +90,7 @@ public class MyApp: Gtk.Application{
     });
 
     // main_window.add(label);
+  
     main_window.set_titlebar(header_bar);
     main_window.add(grid);
     main_window.show_all();
